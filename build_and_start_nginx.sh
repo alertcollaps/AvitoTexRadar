@@ -9,15 +9,18 @@ echo "Copying built files to nginx directories..."
 mkdir -p /opt/build-your-own-radar
 cd /opt/build-your-own-radar
 
-
 cp -r /src/build-your-own-radar/dist/* ./
 mkdir -p files
+mkdir -p method
 cp /src/build-your-own-radar/spec/end_to_end_tests/resources/localfiles/* ./files/
 cp /src/build-your-own-radar/default.template /etc/nginx/conf.d/default.conf
+cp -r /src/build-your-own-radar/src/localfiles/* ./method/
 
 ls
-echo "ggwp"
+ls method
+echo "GG1231"
 echo "Starting nginx server..."
+
 nginx
 echo "Nginx server is UP!"
 

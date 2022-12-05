@@ -53,6 +53,7 @@ module.exports = {
   context: __dirname,
   entry: {
     common: common,
+
   },
 
   output: {
@@ -117,11 +118,7 @@ module.exports = {
         exclude: /node_modules/,
         type: 'asset/resource',
       },
-      {
-        test: /\.(json|csv)$/,
-        exclude: /node_modules/,
-        type: 'asset/resource',
-      },
+
       {
         test: require.resolve('jquery'),
         loader: 'expose-loader',

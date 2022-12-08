@@ -341,7 +341,19 @@ var pathRadar = './index';
                         h.append("div").attr("class", "quadrant-table " + n.order),
                         d.append("div").attr("class", "button " + n.order + " full-view").text(n.quadrant.name()).on("mouseover", P.bind({}, n.order)).on("mouseout", I.bind({}, n.order)).on("click", B.bind({}, n.order, n.startAngle))
                     }
+
                   )),
+                    o.each([4], (function(t) {
+                        var n;
+                        n = e[t],
+                          h.append("div").attr("class", "quadrant-table " + "back"),
+                          d.append("div").attr("class", "button " + "back" + " full-view").text("Back").on("mouseover", P.bind({}, "back")).on("mouseout", I.bind({}, "back")).on("click",  ()  => {
+                              location.href = "/";
+                            }
+                        )
+                      }
+
+                    )),
                     p.append("div").classed("print-radar-btn", !0).append("div").classed("print-radar button no-capitalize", !0).text("Print this radar").on("click", window.print.bind(window)),
                     g.append("div").classed("search-box", !0).append("input").attr("id", "auto-complete").attr("placeholder", "Search").classed("search-radar", !0),
                     u("#auto-complete", e, E)

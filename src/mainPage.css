@@ -278,6 +278,8 @@ body {
     color: #A169F7; }
   .quadrant-table.fourth .quadrant-table__name {
     color: #97CF26; }
+  .quadrant-table.back .quadrant-table__name {
+    color: #000000; }
   .quadrant-table {
     page-break-after: always; }
     .quadrant-table ul {
@@ -400,11 +402,11 @@ body {
       #radar div.quadrant-table.first {
         right: 20px; }
         #radar div.quadrant-table.first.selected {
-          float: left; }
+          float: right; }
       #radar div.quadrant-table.second {
         left: 20px; }
         #radar div.quadrant-table.second.selected {
-          float: right; }
+          float: left; }
       #radar div.quadrant-table.third {
         left: 20px; }
         #radar div.quadrant-table.third.selected {

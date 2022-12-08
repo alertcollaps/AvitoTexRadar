@@ -23,11 +23,6 @@ const ASSET_PATH = process.env.ASSET_PATH || '/'
 const plugins = [
   new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
   new HtmlWebpackPlugin({
-    template: './src/index.html',
-    chunks: ['main'],
-    inject: 'body',
-  }),
-  new HtmlWebpackPlugin({
     template: './src/error.html',
     chunks: ['common'],
     inject: 'body',

@@ -10,6 +10,7 @@ mkdir -p /opt/build-your-own-radar
 cd /opt/build-your-own-radar
 
 cp -r /src/build-your-own-radar/dist/* ./
+cp /src/build-your-own-radar/src/345.57520dbef7253c6e863b.js ./345.57520dbef7253c6e863b.js
 mkdir -p files
 mkdir -p method
 cp /src/build-your-own-radar/spec/end_to_end_tests/resources/localfiles/* ./files/

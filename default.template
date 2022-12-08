@@ -15,8 +15,13 @@ server {
           try_files $uri $uri/ =404;
       }
 
-  location ~ /method/(.*)/ {
-      root /opt/build-your-own-radar/;
+  location ~ /(.*)/ {
+      location ~ /images/ {
+          root /opt/build-your-own-radar;
+          try_files $uri $uri/ =404;
+      }
+      root /opt/build-your-own-radar/method/;
+      #rewrite ^(.*)$ /method/$1 last;
       try_files $uri /mainPage.html;
       index mainPage.html;
 
@@ -36,10 +41,5 @@ server {
     root /usr/share/nginx/html;
   }
 
-  location ~ /files/ {
-    root /opt/build-your-own-radar;
-    autoindex on;
-    default_type text/plain;
-    add_header 'Access-Control-Allow-Origin' '*';
-  }
+
 }

@@ -86,3 +86,12 @@ $PORT - внешний порт.
 Напрмер, производится запрос localhost:80/android/. Тогда в папке src/localfiles/android/ ищется
 файл index.csv или index.json. Если запрос на localhost:80/backend/- то в каталоге
 src/localfiles/backend/.
+
+```
+minikube -p minikube docker-env --shell powershell | Invoke-Expression
+docker build -t wwwthoughtworks/build-your-own-radar .
+minikube image load wwwthoughtworks/build-your-own-radar
+kubectl run second-container --image=wwwthoughtworks/build-your-own-radar --image-pull-policy=Never --restart=Never
+kubectl logs second-container
+kubectl port-forward second-container 80:80
+```

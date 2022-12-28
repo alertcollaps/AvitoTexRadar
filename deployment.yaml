@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: own-radar
+spec:
+  selector:
+    matchLabels:
+      app: own-radar
+  template:
+    metadata:
+      labels:
+        app: own-radar
+    spec:
+      containers:
+      - name: own-radar
+        image: wwwthoughtworks/build-your-own-radar
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
